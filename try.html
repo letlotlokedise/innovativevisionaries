@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Innovative Visionaries Club</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Sidebar Toggle Button -->
+  <button class="toggle-btn" onclick="toggleSidebar()">☰☰☰</button>
+
+  <!-- Header -->
+  <header>
+    <center>
+      <img src="images/presidents/banner.png" alt="Innovative Visionaries Banner" width="1263" height="400">
+    </center>
+  </header>
+
+  <!-- Sidebar Navigation -->
+  <nav id="sidebar" class="sidebar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="pillars.html">Key Pillars</a>
+    <a href="initiatives.html">Initiatives</a>
+    <a href="future.html">Future Plans</a>
+    <a href="team.html">Meet Our Team</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Main Content -->
+  <header class="text-white py-4 text-center header" style="background: linear-gradient(90deg, #000000, #737373);">
+    <div id="mainContent" class="main-container">
+      <main class="container py-5">
+        <section class="text-center">
+          <h2>Welcome to the Innovative Visionaries Club!</h2>
+          <p class="lead mt-3">
+            The Innovative Visionaries Club (IV Club) is a dynamic community of innovators, changemakers, and leaders committed to transforming lives and creating a better tomorrow. Founded in 2021, our mission is to inspire young minds to dream big, take initiative, and drive impactful change in their communities and beyond.
+          </p>
+          <p>
+            Whether you are passionate about leadership, technology, entrepreneurship, or community development, there is a place for you at IV Club. Join us and become part of a movement that empowers youth and nurtures visionary solutions to global challenges.
+          </p>
+          <a href="about.html" class="btn btn-primary mt-3">Learn More About Us</a>
+        </section>
+
+        <section class="mt-5">
+          <h3 class="text-center">Our Key Focus Areas</h3>
+          <div class="row g-4 mt-3">
+            <div class="col-md-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Leadership Development</h5>
+                  <p class="card-text">We equip future leaders with essential soft skills and real-world project experience.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Innovation & Technology</h5>
+                  <p class="card-text">We encourage the use of modern technologies to create solutions to pressing challenges.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Community Impact</h5>
+                  <p class="card-text">We run programs that directly address community needs and inspire lasting change.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="mt-5 text-center">
+          <h3>Upcoming Events</h3>
+          <p class="mt-3">Stay tuned for our 2025 Youthnovation Hackathon and the relaunch of the Career & Business Talk Series!</p>
+          <a href="initiatives.html" class="btn btn-secondary mt-2">Explore Our Initiatives</a>
+        </section>
+      </main>
+    </div>
+  </header>
+
+  <!-- Footer -->
+  <footer class="text-white text-center py-3 mt-auto"
+          style="background: radial-gradient(circle at 0% 0%, rgba(255, 255, 255, 1), rgba(155, 155, 155, 1), rgba(209, 136, 51, 1), rgba(166, 92, 5, 0.605));">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="footer-social">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.facebook.com/share/18DcBvbVfh/" target="_blank">
+                  <img src="facebook.png" width="30" height="30" alt="Facebook" />
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.linkedin.com/company/innovative-visionaries/" target="_blank">
+                  <img src="linkedin.png" width="30" height="30" alt="LinkedIn" />
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" target="_blank">
+                  <img src="twitter.png" width="30" height="30" alt="Twitter" />
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" target="_blank">
+                  <img src="email.png" width="30" height="30" alt="Email" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-6 text-center">
+          <p>Website designed and developed by 
+            <strong>
+              <a href="https://www.facebook.com/share/18H1XUeMsZ/" class="text-white">
+                <img src="cerulean.png" alt="Cerulean Visuals LOGO" height="50px" width="50px">
+              </a>
+            </strong>
+          </p>
+
+         <a href="index.html">
+  <img src="logo.png" alt="IV LOGO" height="80px" width="85px">
+</a><br>
+
+          <small>&copy; 2025 Innovative Visionaries Club. All Rights Reserved.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sidebar Toggle Script -->
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      const mainContent = document.getElementById('mainContent');
+      sidebar.classList.toggle('collapsed');
+      mainContent.classList.toggle('shifted');
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
