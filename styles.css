@@ -1,13 +1,8 @@
-
-
-
-
-
 body {
   margin: 0;
   padding: 0;
   background: linear-gradient(135deg, #f4f4f4, #919191, #c9c9c9);
- }
+}
 
 .card:hover {
   animation: shake 0.5s;
@@ -28,71 +23,92 @@ body {
   100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
-
-
-    .nav-link.btn.btn-secondary:hover {
-  background-color: #ffc107; /* Gold hover effect */
+.nav-link.btn.btn-secondary:hover {
+  background-color: #ffc107;
   color: black !important;
   transition: 0.3s ease;
 }
 
-
 .nav-link.btn:hover {
-  background-color: #c8c340; /* Example hover color */
-  color: #000;               /* Text color on hover */
+  background-color: #c8c340;
+  color: #000;
   transition: all 0.3s ease;
 }
 
+/* Hide sidebar by default */
+.sidebar {
+  display: none;
+}
 
-    .sidebar a {
-      color: white;
-      display: block;
-      padding: 15px;
-      text-decoration: blue;
-    }
+/* Show sidebar and toggle button only on mobile devices */
+@media (max-width: 600px) {
+  .sidebar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    background-color: #343a40;
+    flex-direction: column;
+    padding-top: 60px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+  }
 
-    .sidebar a:hover {
-      background-color: #495057;
-    }
+  .sidebar.active {
+    transform: translateX(0);
+  }
 
-    .sidebar.collapsed {
-      transform: translateX(-100%);
-    }
+  .sidebar a {
+    color: white;
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    border-bottom: 1px solid #495057;
+  }
 
-    .main-container {
-      transition: margin-left 0.3s ease;
-      margin-left: 250px;
-      padding: 20px;
-    }
+  .sidebar a:hover {
+    background-color: #495057;
+  }
 
-    .main-container.shifted {
-      margin-left: 0;
-    }
+  .toggle-btn {
+    display: block;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1100;
+    background-color: #0d6efd;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+  }
 
-    .header {
-      position: flex;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1050;
-    }
-	
-	
+  .main-container {
+    margin-left: 0;
+    padding: 20px;
+  }
+}
 
-    .toggle-btn {
-      position: fixed;
-      top: 15px;
-      left: 15px;
-      z-index: 1100;
-      background-color: #0d6efd;
-      border: none;
-      color: white;
-      padding: 10px 15px;
-      border-radius: 5px;
-    }
+/* Hide toggle and sidebar on larger screens */
+@media (min-width: 601px) {
+  .sidebar,
+  .toggle-btn {
+    display: none !important;
+  }
 
-    @media (max-width: 768px) {
-      .main-container {
-        margin-left: 0;
-      }
-    }
+  .main-container {
+    margin-left: 250px;
+    padding: 20px;
+  }
+}
+
+.header {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1050;
+}
